@@ -10,7 +10,7 @@ status](https://travis-ci.com/njuguna-brian/farsdata.svg?branch=main)](https://t
 [![R-CMD-check](https://github.com/njuguna-brian/farsdata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/njuguna-brian/farsdata/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of farsdata is to …
+The goal of farsdata is to provide a set of functions that can be used to read, summarize, and plot the Fatality Analysis Reporting System(FARS) data.
 
 ## Installation
 
@@ -28,5 +28,5 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(farsdata)
-## make_filename(2013)
+make_filename(2013)
 ```
