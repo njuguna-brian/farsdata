@@ -1,0 +1,97 @@
+---
+title: "Details"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Details}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+```{r setup}
+library(farsdata)
+```
+
+# Introduction
+
+The FARS (Fatality Analysis Reporting System) is a nationwide census providing annual data regarding fatal injuries suffered in motor vehicle traffic crashes. The data is collected by the National Highway Traffic Safety Administration (NHTSA) and can be useful for analyzing trends in traffic fatalities and informing public policy.
+
+This package provides a set of functions that can be used to read, summarize, and plot the FARS data.
+
+# Installation
+
+You can install the package from GitHub using the following code:
+
+```{r, eval=FALSE}
+devtools::install_github("yourusername/farsdata")
+
+```
+# Usage
+
+The package includes several functions that can be used to read, summarize, and plot the FARS data. The main functions in the package are:
+
+## fars_read()
+
+This function reads the FARS data from a CSV file and returns a tibble. The function takes one argument, the file name or path of the CSV file.
+
+```{r}
+# Load the package
+library(farsdata)
+
+# Read the FARS data for a single year
+fars_data <- fars_read("accident_2013.csv")
+
+```
+
+## make_filename
+
+This function generates a file name for the FARS data based on a given year.
+
+```{r}
+# Generate a file name for the FARS data
+filename <- make_filename(2013)
+```
+
+## fars_read_years()
+
+This function reads the FARS data for a list of years using the fars_read() function and returns a tibble containing the number of accidents by month and year for all the specified years.
+
+```{r}
+# Read the FARS data for multiple years
+years <- c(2013, 2014, 2015)
+fars_data_years <- fars_read_years(years)
+```
+
+## fars_summarize_years()
+
+This function summarizes the FARS data for a list of years using the fars_read_years() function and returns a tibble containing the number of accidents by month and year, spread across multiple columns.
+
+```{r}
+# Summarize the FARS data for multiple years
+fars_summarize_years(years)
+```
+
+
+## fars_map_state()
+
+This function plots the location of accidents on a map for a given state and year.
+
+```{r}
+# Plot the location of accidents for a given state and year
+fars_map_state(10, 20)
+```
+
+# Conclusion
+
+The farsdata package provides a set of functions that can be used to read, summarize, and plot the FARS data. The functions can be useful for analyzing trends in traffic fatalities and informing public policy. The package is easy to use and provides a simple interface for working with the FARS data.
+
+
+
+

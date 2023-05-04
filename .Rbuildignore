@@ -1,0 +1,10 @@
+^farsdata\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^README\.Rmd$
+^doc$
+^Meta$
+^\.travis\.yml$
+^\.github$
+^CRAN-SUBMISSION$
+^cran-comments\.md$

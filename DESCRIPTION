@@ -1,0 +1,23 @@
+Package: farsdata
+Title: Functions for working with Fatality Analysis Reporting System (FARS) data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Brian", "Njuguna", , "briannjuguna133@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Provides functions for working with Fatality Analysis Reporting System (FARS) data, including loading and summarizing accident data from FARS files. Includes functions for creating maps of accidents and identifying trends in accident data.
+License: AGPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports:
+  dplyr,
+  maps,
+  tidyr,
+  readr
+VignetteBuilder: knitr
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
